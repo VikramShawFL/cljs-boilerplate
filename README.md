@@ -1,34 +1,22 @@
 # cljs-boilerplate
 
-FIXME: Write a one-line description of your library/project.
+Example boilerplate project for cljs. Uses fighweel main and reagent.
 
-## Overview
+## How To
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+    lein new figwheel-main %project_name% -- --reagent
 
-## Development
+There is a small bug in the template which I need to correct. In core.cljs, there is a hiccup element with a h3 tag ... the second slash always comes as backward for some reason ... this causes the repl to crash. Correct this before trying to run the repl.
 
-To get an interactive development environment run:
+Run the repl with
+    M-x cider-jack-in-cljs
 
-    lein fig:build
+Then wait for the popup that asks you to choose your cider repl of choice.
+Choose figwheel-main.
 
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+## Issues
 
-    (js/alert "Am I connected?")
-
-and you should see an alert in the browser window.
-
-To clean all compiled files:
-
-	lein clean
-
-To create a production build run:
-
-	lein clean
-	lein fig:min
-
+When we had originally configured emacs, because of discrepancy with spacemacs, lein version, cider version etc ... we had disabled some nrepl packages ... if the repl does not work, we will need to disable them, and make sure all our versions are up to date.
 
 ## License
 
